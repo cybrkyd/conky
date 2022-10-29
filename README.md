@@ -17,29 +17,29 @@ present, delete them from the Conky Ironman `fonts` directory.
 
 ## Installation
 
-Download the release and extract.
+Download the release .zip or .tar.gz and extract.
 
-1. Copy the directory `conky` to `/opt`:
+1. **Copy the directory `conky` to `/opt`:**
 ```
 sudo cp -r conky /opt
 ```
 
-2. Copy the directory `to-do` to ~/Documents
+2. **Copy the directory `to-do` to ~/Documents:**
 ```
 cp -r to-do ~/Documents
 ```
 
-3. Copy the directory `fonts` to `/usr/share/fonts`:
+3. **Copy the directory `fonts` to `/usr/share/fonts`:**
 ```
 sudo cp -r fonts /usr/share/fonts
 ```
 
-4. Update the font cache:
+4. **Update the font cache:**
 ```
 sudo fc-cache -fv
 ```
 
-5. Set Conky Ironman to run at startup.
+5. **Set Conky Ironman to run at startup:**
 
 There are various ways to do this. Some desktop environments allow startup 
 applications and scripts to be set via a system configuration or tweaks menu. 
@@ -51,6 +51,8 @@ To add a @reboot `cron` task:
 ```
 @reboot /opt/conky/conky-startup.sh
 ```
+
+Reboot.
 
 ## Licences
 Conky Ironman is available under a [GPL3 license](https://github.com/cybrkyd/conky/blob/main/LICENSE).
