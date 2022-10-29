@@ -12,6 +12,8 @@ and an optional to-do list.
 - Conky Ironman requires Conky version 1+
 - Fonts: Ubuntu, OpenSans, Kanit Thin
 
+**NOTE:** Check if Ubuntu and OpenSans are already installed on your system.
+
 ## Installation from .zip
 
 Download the .zip and extract.
@@ -21,7 +23,7 @@ Download the .zip and extract.
 sudo cp -r conky /opt
 ```
 
-2. Copy the directory <span color="red">fonts<span> to `/usr/share/fonts`:
+2. Copy the directory `fonts` to `/usr/share/fonts`:
 ```bash
 sudo cp -r fonts /usr/share/fonts
 ```
