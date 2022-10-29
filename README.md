@@ -22,17 +22,17 @@ may need to adjust the alignment to your own resolution and taste.
 
 Download the release .zip or .tar.gz and extract.
 
-1. Copy the directory **`conky`** to **`/opt`:**
+1. Copy the directory **`conky`** to **`/opt`**:
 ```
 sudo cp -r conky /opt
 ```
 
-2. Copy the directory **`to-do`** to **~/Documents:**
+2. Copy the directory **`to-do`** to **`~/Documents`**:
 ```
 cp -r to-do ~/Documents
 ```
 
-3. Copy the directory **`fonts`** to **`/usr/share/fonts`:**
+3. Copy the directory **`fonts`** to **`/usr/share/fonts`**:
 ```
 sudo cp -r fonts /usr/share/fonts
 ```
