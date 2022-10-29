@@ -15,39 +15,42 @@ and a to-do list.
 **NOTE:** Check if Ubuntu and OpenSans are already installed on your system. If 
 present, delete them from the Conky Ironman `fonts` directory.
 
+**ALSO NOTE:** This theme is scaled to a monitor with resolution 1920x1080. You 
+may need to adjust the alignment to your own resolution and taste.
+
 ## Installation
 
 Download the release .zip or .tar.gz and extract.
 
-1. **Copy the directory `conky` to `/opt`:**
+1. Copy the directory **`conky`** to **`/opt`:**
 ```
 sudo cp -r conky /opt
 ```
 
-2. **Copy the directory `to-do` to ~/Documents:**
+2. Copy the directory **`to-do`** to **~/Documents:**
 ```
 cp -r to-do ~/Documents
 ```
 
-3. **Copy the directory `fonts` to `/usr/share/fonts`:**
+3. Copy the directory **`fonts`** to **`/usr/share/fonts`:**
 ```
 sudo cp -r fonts /usr/share/fonts
 ```
 
-4. **Update the font cache:**
+4. Update the font cache:
 ```
 sudo fc-cache -fv
 ```
 
-5. **Set Conky Ironman to run at startup:**
+5. Set Conky Ironman to run at startup:
 
 There are various ways to do this. Some desktop environments allow startup 
 applications and scripts to be set via a system configuration or tweaks menu. 
 The universal method of using `cron` will make sense to everyone.
 
-To add a @reboot `cron` task:
-- Run the command `crontab -e` to edit your cron
-- Add a @reboot directive, assuming Conky Ironman is in `/opt`:
+To add a @reboot **`cron`** task:
+- Run the command **`crontab -e`** to edit your cron
+- Add a @reboot directive, assuming Conky Ironman is in **`/opt`**:
 ```
 @reboot /opt/conky/conky-startup.sh
 ```
