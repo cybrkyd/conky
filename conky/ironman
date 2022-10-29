@@ -1,0 +1,72 @@
+conky.config = {
+alignment = 'top_right',
+background = false,
+color0 = 'CD5C5C',
+color1 = 'cd955c',
+color2 = '34a96f',
+cpu_avg_samples = 2,
+default_color = '888888',
+default_outline_color = 'green',
+default_shade_color = 'red',
+draw_borders = false,
+draw_graph_borders = false,
+draw_outline = false,
+draw_shades = false,
+use_xft = true,
+font = 'Open Sans:size=8',
+gap_x = 10,
+gap_y = 10,
+maximum_width = 260,
+minimum_width = 250,
+net_avg_samples = 1,
+double_buffer = true,
+own_window = true,
+own_window_colour = '000000',
+own_window_class = 'Conky',
+own_window_argb_visual = true,
+own_window_type = 'normal',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+update_interval = 1,
+}
+
+conky.text = [[
+${goto 10}${voffset -25}${font Kanit Thin:pixelsize=80}${time %H:%M}${font}
+${voffset 5}${offset 10}${font Ubuntu:pixelsize=22}${time %d} ${time %b} ${time %Y}
+${offset 10}${time %A}${font}
+  
+${goto 10}${font Ubuntu:pixelsize=15}SYSTEM${offset 8}${voffset -2}${hr}
+
+${goto 10}${font Ubuntu:pixelsize=17}Linux mint
+${goto 10}$kernel${font}
+
+${goto 10}${font Ubuntu:pixelsize=12}${color1}Uptime:${goto 120}$color$uptime_short
+${goto 10}${color1}Networking:${goto 120}${color grey}Up:${goto 150}$color${upspeed wlo1}
+${goto 120}${color grey}Dn:${goto 150}$color${downspeed wlo1}${font}
+
+${goto 30}${cpubar cpu0 30,200}
+${voffset -38}${goto 70}${font Open Sans:size=14}CPU${font}${goto 150}${voffset -8}${font Open Sans:size=12}${cpu cpu0} %${font}
+${voffset 10}${goto 10}${font Ubuntu:pixelsize=12}${color1}Name${goto 160}CPU${goto 210}MEM${color}
+${voffset 5}${goto 10}${top name 1}${goto 156}${top cpu 1}${goto 206}${top mem 1}
+${goto 10}${top name 2}${goto 156}${top cpu 2}${goto 206}${top mem 2}
+${goto 10}${top name 3}${goto 156}${top cpu 3}${goto 206}${top mem 3}
+${goto 10}${top name 4}${goto 156}${top cpu 4}${goto 206}${top mem 4}
+${goto 10}${top name 5}${goto 156}${top cpu 5}${goto 206}${top mem 5}
+${goto 10}${top name 6}${goto 156}${top cpu 6}${goto 206}${top mem 6}${font}
+${goto 30}${voffset 8}${membar 30,200}
+${voffset -38}${goto 70}${font Open Sans:size=14}MEM${font}${goto 150}${voffset -8}${font Open Sans:size=12}${memperc} %${font}
+
+${voffset 4}
+${offset 4}${font Ubuntu:pixelsize=15}TO DO${offset 8}${voffset -2}${hr}${font}
+
+${font Ubuntu:pixelsize=12}${execi 86400 cat ~/Documents/to-do/todo.txt}${font}
+${voffset 4}
+${offset 4}${font Ubuntu:pixelsize=15}CRYPTO-PRICES${offset 8}${voffset -2}${hr}${font}
+
+${font Ubuntu:pixelsize=12}${color2}${offset 22}BTC :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | cut -d\: -f5 | cut -d\" -f2}
+${offset 22}ETH :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | cut -d\: -f5 | cut -d\" -f2}
+${offset 22}ETC :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/ETC-USD/buy | cut -d\: -f5 | cut -d\" -f2}
+${offset 22}EOS :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/EOS-USD/buy | cut -d\: -f5 | cut -d\" -f2}
+${offset 22}XLM :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/XLM-USD/buy | cut -d\: -f5 | cut -d\" -f2}${color}${font}
+${goto 10}${hr}
+]]
