@@ -1,7 +1,9 @@
 
 # Conky Ironman
 
-A beautiful Conky featuring date, time, system info, network status and live crypto prices.
+A nice Conky which displays date, time, system info, live crypto prices and an 
+optional to-do list.
 
 ## Licences
-Conky Ironman is available under a GPL3 license. Nice.
+Conky Ironman is available under a GPL3 license.
+
