@@ -49,8 +49,8 @@ ${goto 10}${color1}Networking:${goto 120}${color grey}Up:${goto 150}$color${upsp
 ${goto 120}${color grey}Dn:${goto 150}$color${downspeed wlo1}${font}
 
 ${goto 30}${cpubar cpu0 30,200}
-${voffset -38}${goto 70}${font Open Sans:size=14}CPU${font}${goto 150}${voffset -8}${font Open Sans:size=12}${cpu cpu0} %${font}
-${voffset 10}${goto 10}${font Ubuntu:pixelsize=12}${color1}Name${goto 160}CPU${goto 210}MEM${color}
+${voffset -38}${goto 70}${font Open Sans:size=14}${color2}CPU${font}${goto 150}${voffset -8}${font Open Sans:size=12}${cpu cpu0} %${font}$color
+${voffset 18}${goto 10}${font Ubuntu:pixelsize=12}${color1}Name${goto 160}CPU${goto 210}MEM${color}
 ${voffset 5}${goto 10}${top name 1}${goto 156}${top cpu 1}${goto 206}${top mem 1}
 ${goto 10}${top name 2}${goto 156}${top cpu 2}${goto 206}${top mem 2}
 ${goto 10}${top name 3}${goto 156}${top cpu 3}${goto 206}${top mem 3}
@@ -58,7 +58,7 @@ ${goto 10}${top name 4}${goto 156}${top cpu 4}${goto 206}${top mem 4}
 ${goto 10}${top name 5}${goto 156}${top cpu 5}${goto 206}${top mem 5}
 ${goto 10}${top name 6}${goto 156}${top cpu 6}${goto 206}${top mem 6}${font}
 ${goto 30}${voffset 8}${membar 30,200}
-${voffset -38}${goto 70}${font Open Sans:size=14}MEM${font}${goto 150}${voffset -8}${font Open Sans:size=12}${memperc} %${font}
+${voffset -38}${goto 70}${font Open Sans:size=14}${color2}MEM${font}${goto 150}${voffset -8}${font Open Sans:size=12}${memperc} %${font}$color
 
 ${voffset 4}
 ${offset 4}${font Ubuntu:pixelsize=15}TO DO${offset 8}${voffset -2}${hr}${font}
@@ -67,10 +67,10 @@ ${font Ubuntu:pixelsize=12}${execi 86400 cat ~/Documents/to-do/todo.txt}${font}
 ${voffset 4}
 ${offset 4}${font Ubuntu:pixelsize=15}CRYPTO-PRICES${offset 8}${voffset -2}${hr}${font}
 
-${font Ubuntu:pixelsize=12}${color2}${offset 22}BTC :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | cut -d\: -f5 | cut -d\" -f2}
-${offset 22}ETH :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | cut -d\: -f5 | cut -d\" -f2}
-${offset 22}ETC :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/ETC-USD/buy | cut -d\: -f5 | cut -d\" -f2}
-${offset 22}EOS :${offset 10}${execi 300 curl -s https://api.coinbase.com/v2/prices/EOS-USD/buy | cut -d\: -f5 | cut -d\" -f2}
-${offset 22}XLM :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/XLM-USD/buy | cut -d\: -f5 | cut -d\" -f2}${color}${font}
+${font Ubuntu:pixelsize=12}${color2}${offset 22}BTC :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | cut -d\: -f3 | cut -d\" -f2}
+${offset 22}ETH :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | cut -d\: -f3 | cut -d\" -f2}
+${offset 22}ETC :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/ETC-USD/buy | cut -d\: -f3 | cut -d\" -f2}
+${offset 22}EOS :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/EOS-USD/buy | cut -d\: -f3 | cut -d\" -f2}
+${offset 22}XLM :${offset 10}${execi 600 curl -s https://api.coinbase.com/v2/prices/XLM-USD/buy | cut -d\: -f3 | cut -d\" -f2}${color}${font}
 ${goto 10}${hr}
 ]]
